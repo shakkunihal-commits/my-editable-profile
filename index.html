@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TapWithNivo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="status-bar">
+        <div class="time">12:08</div>
+        <div class="status-icons">
+          <span>◔</span>
+          <span>◌</span>
+          <span>▣</span>
+        </div>
+      </div>
+
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">N</div>
+          <div class="brand-name" id="brandName">TapWithNivo.</div>
+        </div>
+
+        <button class="tap-in-btn" id="editProfileBtn">TAP IN</button>
+      </header>
+
+      <main class="content">
+        <section class="featured-card social-card featured">
+          <div class="card-header">
+            <div class="icon-box instagram-icon">
+              <span class="camera"></span>
+            </div>
+            <span class="card-index">/01</span>
+          </div>
+
+          <div class="featured-label-wrap">
+            <span class="featured-label">MOST TAPPED</span>
+          </div>
+
+          <div class="featured-main">
+            <h2 id="featuredTitle">Instagram</h2>
+            <div class="handle-row">
+              <span id="featuredHandle">@tapwithnivo</span>
+              <a id="featuredLink" href="#" aria-label="Open Instagram">
+                <span class="arrow-link">↗</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="social-grid">
+          <article class="social-card">
+            <div class="card-header">
+              <div class="icon-box youtube-icon">▶</div>
+              <span class="card-index">/02</span>
+            </div>
+            <div class="card-body">
+              <h3>YouTube</h3>
+              <div class="link-row">
+                <span id="youtubeHandle">@tapwithnivo</span>
+                <a id="youtubeLink" href="#" aria-label="Open YouTube"><span class="arrow-link">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="social-card">
+            <div class="card-header">
+              <div class="icon-box whatsapp-icon">◔</div>
+              <span class="card-index">/03</span>
+            </div>
+            <div class="card-body">
+              <h3>WhatsApp</h3>
+              <div class="link-row">
+                <span id="whatsappHandle">WA.ME/TAPWITHNIVO</span>
+                <a id="whatsappLink" href="#" aria-label="Open WhatsApp"><span class="arrow-link">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="social-card">
+            <div class="card-header">
+              <div class="icon-box snapchat-icon">◌</div>
+              <span class="card-index">/04</span>
+            </div>
+            <div class="card-body">
+              <h3>Snapchat</h3>
+              <div class="link-row">
+                <span id="snapchatHandle">@tapwithnivo</span>
+                <a id="snapchatLink" href="#" aria-label="Open Snapchat"><span class="arrow-link">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="social-card">
+            <div class="card-header">
+              <div class="icon-box spotify-icon">◍</div>
+              <span class="card-index">/05</span>
+            </div>
+            <div class="card-body">
+              <h3>Spotify</h3>
+              <div class="link-row">
+                <span id="spotifyHandle">ARTIST/TAPWITHNIVO</span>
+                <a id="spotifyLink" href="#" aria-label="Open Spotify"><span class="arrow-link">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="social-card">
+            <div class="card-header">
+              <div class="icon-box discord-icon">◉</div>
+              <span class="card-index">/06</span>
+            </div>
+            <div class="card-body">
+              <h3>Discord</h3>
+              <div class="link-row">
+                <span id="discordHandle">GG/TAPWITHNIVO</span>
+                <a id="discordLink" href="#" aria-label="Open Discord"><span class="arrow-link">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="social-card">
+            <div class="card-header">
+              <div class="icon-box x-icon">X</div>
+              <span class="card-index">/07</span>
+            </div>
+            <div class="card-body">
+              <h3>X</h3>
+              <div class="link-row">
+                <span id="xHandle">@tapwithnivo</span>
+                <a id="xLink" href="#" aria-label="Open X"><span class="arrow-link">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal hidden" id="profileModal" aria-hidden="true">
+      <div class="modal-panel">
+        <div class="modal-head">
+          <h3>Edit Profile</h3>
+          <button class="close-btn" id="closeModalBtn" aria-label="Close">×</button>
+        </div>
+
+        <form id="profileForm">
+          <label>
+            Profile Name
+            <input type="text" id="profileNameInput" placeholder="TapWithNivo" />
+          </label>
+
+          <label>
+            Instagram Link
+            <input type="url" id="instagramInput" placeholder="https://instagram.com/tapwithnivo" />
+          </label>
+
+          <label>
+            YouTube Link
+            <input type="url" id="youtubeInput" placeholder="https://youtube.com/@tapwithnivo" />
+          </label>
+
+          <label>
+            WhatsApp Link
+            <input type="url" id="whatsappInput" placeholder="https://wa.me/123456789" />
+          </label>
+
+          <label>
+            Snapchat Link
+            <input type="url" id="snapchatInput" placeholder="https://snapchat.com/add/tapwithnivo" />
+          </label>
+
+          <label>
+            Spotify Link
+            <input type="url" id="spotifyInput" placeholder="https://open.spotify.com/artist/yourid" />
+          </label>
+
+          <label>
+            Discord Link
+            <input type="url" id="discordInput" placeholder="https://discord.gg/yourlink" />
+          </label>
+
+          <label>
+            X Link
+            <input type="url" id="xInput" placeholder="https://x.com/tapwithnivo" />
+          </label>
+
+          <div class="form-actions">
+            <button type="button" class="secondary-btn" id="cancelBtn">Cancel</button>
+            <button type="submit" class="primary-btn">Save Profile</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
